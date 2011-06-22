@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<game xml_version="2.00">
+	<sides paths="RoboArena_board.png">
+		<board>Main board</board>
+	</sides>
+	<sides paths="RoboArena_RedDrawBoard.png">
+		<board edge="0" position="0.3">Red</board>
+	</sides>
+	<sides paths="RoboArena_BlueDrawBoard.png">
+		<board edge="2" position="0.3">Blue</board>
+	</sides>
+	<sides paths="RoboArena_NeutralDrawBoard.png">
+		<board edge="2" position="0.5">Walls</board>
+	</sides>
+	<sides paths="RoboArena_NeutralDrawBoard.png">
+		<board edge="2" position="0.7">Pits</board>
+	</sides>
+	<location_type type="cell">
+		<size width="96" height="96">
+			<location_in_action action="set_rotation" args="-90">
+				<corner_coord board="1" x="0" y="0">
+					<location rows="2" cols="6">location_reddraw</location>
+				</corner_coord>
+			</location_in_action>
+			<location_in_action action="set_rotation" args="90">
+				<corner_coord board="2" x="0" y="0">
+					<location rows="2" cols="6">location_bluedraw</location>
+				</corner_coord>
+			</location_in_action>
+			<corner_coord board="3" x="0" y="0">
+				<location rows="2" cols="6">location_wallsdraw</location>
+			</corner_coord>
+			<corner_coord board="4" x="0" y="0">
+				<location rows="2" cols="6">location_pitsdraw</location>
+			</corner_coord>
+		</size>
+	</location_type>
+	<location_type type="cell">
+		<location_in_action action="set_rotation" args="0">
+			<size width="96" height="96">
+				<corner_coord board="0" x="0" y="0">
+					<location rows="8" cols="10">MainCanvas</location>
+				</corner_coord>
+			</size>
+		</location_in_action>
+	</location_type>
+	<single_tap action="increment_side" args="wrap">
+		<double_tap action="random_side" args="v2">
+			<triple_tap action="send_to_back" args="">
+				<quad_tap action="shuffle_location" args="">
+					<initial_rotation value="-90">
+						<sides paths="RoboArena_DroneR_x2.png">
+							<initial_location name="location_reddraw_0_0">
+								<piece>DroneR_x1</piece>
+							</initial_location>
+							<initial_location name="location_reddraw_1_0">
+								<piece>DroneR_x2</piece>
+							</initial_location>
+						</sides>
+						<sides paths="RoboArena_FireFlyR_x2.png">
+							<initial_location name="location_reddraw_2_0">
+								<piece>FireFlyR_x1</piece>
+							</initial_location>
+							<initial_location name="location_reddraw_3_0">
+								<piece>FireFlyR_x2</piece>
+							</initial_location>
+						</sides>
+						<sides paths="RoboArena_HoverBotR_x2.png">
+							<initial_location name="location_reddraw_4_0">
+								<piece>HoverBotR_x1</piece>
+							</initial_location>
+							<initial_location name="location_reddraw_5_0">
+								<piece>HoverBotR_x2</piece>
+							</initial_location>
+						</sides>
+						<sides paths="RoboArena_RoboR.png">
+							<initial_location name="location_reddraw_0_1">
+								<piece>RoboR</piece>
+							</initial_location>
+						</sides>
+						<sides paths="RoboArena_SypderR_x2.png">
+							<initial_location name="location_reddraw_1_1">
+								<piece>SypderR_x1</piece>
+							</initial_location>
+							<initial_location name="location_reddraw_2_1">
+								<piece>SypderR_x2</piece>
+							</initial_location>
+						</sides>
+						<sides paths="RoboArena_TurretR_x2.png">
+							<initial_location name="location_reddraw_3_1">
+								<piece>TurretR_x1</piece>
+							</initial_location>
+							<initial_location name="location_reddraw_4_1">
+								<piece>TurretR_x2</piece>
+							</initial_location>
+						</sides>
+						<sides paths="RoboArena_FlagR.png">
+							<initial_location name="location_reddraw_5_1">
+								<piece>FlagR.png</piece>
+							</initial_location>
+						</sides>
+					</initial_rotation>
+					<initial_rotation value="90">
+						<sides paths="RoboArena_DroneB_x2.png">
+							<initial_location name="location_bluedraw_0_0">
+								<piece>DroneB_x1</piece>
+							</initial_location>
+							<initial_location name="location_bluedraw_1_0">
+								<piece>DroneB_x2</piece>
+							</initial_location>
+						</sides>
+						<sides paths="RoboArena_FireFlyB_x2.png">
+							<initial_location name="location_bluedraw_2_0">
+								<piece>FireFlyB_x1</piece>
+							</initial_location>
+							<initial_location name="location_bluedraw_3_0">
+								<piece>FireFlyB_x2</piece>
+							</initial_location>
+						</sides>
+						<sides paths="RoboArena_HoverBotB_x2.png">
+							<initial_location name="location_bluedraw_4_0">
+								<piece>HoverBotB_x1</piece>
+							</initial_location>
+							<initial_location name="location_bluedraw_5_0">
+								<piece>HoverBotB_x2</piece>
+							</initial_location>
+						</sides>
+						<sides paths="RoboArena_RoboB.png">
+							<initial_location name="location_bluedraw_0_1">
+								<piece>RoboB</piece>
+							</initial_location>
+						</sides>
+						<sides paths="RoboArena_SpyderB_x2.png">
+							<initial_location name="location_bluedraw_1_1">
+								<piece>SpyderB_x1</piece>
+							</initial_location>
+							<initial_location name="location_bluedraw_2_1">
+								<piece>SpyderB_x2</piece>
+							</initial_location>
+						</sides>
+						<sides paths="RoboArena_TurretB_x2.png">
+							<initial_location name="location_bluedraw_3_1">
+								<piece>TurretB_x1</piece>
+							</initial_location>
+							<initial_location name="location_bluedraw_4_1">
+								<piece>TurretB_x2</piece>
+							</initial_location>
+						</sides>
+						<sides paths="RoboArena_FlagB.png">
+							<initial_location name="location_bluedraw_5_1">
+								<piece>FlagB.png</piece>
+							</initial_location>
+						</sides>
+					</initial_rotation>
+					<sides paths="RoboArena_Wall_x12_s1.png,RoboArena_Wall_x12_s2.png">
+						<initial_location name="location_wallsdraw_0_0">
+							<piece>Wall_x1</piece>
+						</initial_location>
+						<initial_location name="location_wallsdraw_1_0">
+							<piece>Wall_x2</piece>
+						</initial_location>
+						<initial_location name="location_wallsdraw_2_0">
+							<piece>Wall_x3</piece>
+						</initial_location>
+						<initial_location name="location_wallsdraw_3_0">
+							<piece>Wall_x4</piece>
+						</initial_location>
+						<initial_location name="location_wallsdraw_4_0">
+							<piece>Wall_x5</piece>
+						</initial_location>
+						<initial_location name="location_wallsdraw_5_0">
+							<piece>Wall_x6</piece>
+						</initial_location>
+						<initial_location name="location_wallsdraw_0_1">
+							<piece>Wall_x7</piece>
+						</initial_location>
+						<initial_location name="location_wallsdraw_1_1">
+							<piece>Wall_x8</piece>
+						</initial_location>
+						<initial_location name="location_wallsdraw_2_1">
+							<piece>Wall_x9</piece>
+						</initial_location>
+						<initial_location name="location_wallsdraw_3_1">
+							<piece>Wall_x10</piece>
+						</initial_location>
+						<initial_location name="location_wallsdraw_4_1">
+							<piece>Wall_x11</piece>
+						</initial_location>
+						<initial_location name="location_wallsdraw_5_1">
+							<piece>Wall_x12</piece>
+						</initial_location>
+					</sides>
+					<sides paths="RoboArena_Pit_x12.png">
+						<initial_location name="location_pitsdraw_0_0">
+							<piece>Pit_x1</piece>
+						</initial_location>
+						<initial_location name="location_pitsdraw_1_0">
+							<piece>Pit_x2</piece>
+						</initial_location>
+						<initial_location name="location_pitsdraw_2_0">
+							<piece>Pit_x3</piece>
+						</initial_location>
+						<initial_location name="location_pitsdraw_3_0">
+							<piece>Pit_x4</piece>
+						</initial_location>
+						<initial_location name="location_pitsdraw_4_0">
+							<piece>Pit_x5</piece>
+						</initial_location>
+						<initial_location name="location_pitsdraw_5_0">
+							<piece>Pit_x6</piece>
+						</initial_location>
+						<initial_location name="location_pitsdraw_0_1">
+							<piece>Pit_x7</piece>
+						</initial_location>
+						<initial_location name="location_pitsdraw_1_1">
+							<piece>Pit_x8</piece>
+						</initial_location>
+						<initial_location name="location_pitsdraw_2_1">
+							<piece>Pit_x9</piece>
+						</initial_location>
+						<initial_location name="location_pitsdraw_3_1">
+							<piece>Pit_x10</piece>
+						</initial_location>
+						<initial_location name="location_pitsdraw_4_1">
+							<piece>Pit_x11</piece>
+						</initial_location>
+						<initial_location name="location_pitsdraw_5_1">
+							<piece>Pit_x12</piece>
+						</initial_location>
+					</sides>
+				</quad_tap>
+			</triple_tap>
+		</double_tap>
+	</single_tap>
+</game>
